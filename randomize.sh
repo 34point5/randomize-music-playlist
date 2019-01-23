@@ -45,7 +45,7 @@ for item in ${random[@]}; do
 		"$count" \
 		"$(basename ${item%.*})"
 	else
-		echo -ne "\a"
+		echo -en "\a"
 	fi
 
 	# display the same information on the Terminal
@@ -58,8 +58,6 @@ for item in ${random[@]}; do
 
 	# open VLC without interface and play one track
 	cvlc --play-and-exit $item
-
-	# track has ended
 	count=$(($count+1))
 	clear
 done
