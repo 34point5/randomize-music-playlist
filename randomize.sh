@@ -7,7 +7,7 @@ green='\033[0;32m'
 nocol='\033[0m'
 
 # store all music files in an array, then sort it randomly
-contents=(/home/tfpf/Music/*)
+contents=(~/Music/*)
 IFS=$'\n' random=($(sort -R <<< "${contents[*]}"))
 unset IFS
 
